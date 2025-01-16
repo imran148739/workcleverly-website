@@ -106,11 +106,10 @@ export default function Header() {
                 <div className="th-menu-area text-center">
                     <button className="th-menu-toggle"><i className="fal fa-times"></i></button>
                     <div className="mobile-logo">
-                        <a className="icon-masking" href="index.html"
-                        ><span className="mask-icon"></span>
-                        {/* <Image src="/assets/img/workcleverly_logo.png" alt="Work Cleverly" width={196} height={46} /> */}
-                        <Image src="/assets/img/yellow_only_text_2_PNG.png" alt="Work Cleverly" width={196} height={46} />
-                            </a>
+                        <Link className="icon-masking" href="/home">
+                            {/* <Image src="/assets/img/logo.svg" alt="Work Cleverly" width={196} height={46} /> */}
+                            <Image src="/assets/img/Workcleverly_png2.png" alt="Work Cleverly" width={180} height={46} />
+                        </Link>
                     </div>
                     <div className="th-mobile-menu">
                         <ul>
@@ -170,13 +169,9 @@ export default function Header() {
                             <div className="row align-items-center justify-content-between">
                                 <div className="col-auto">
                                     <div className="header-logo">
-                                        <a className="icon-masking" href="index.html"
-                                        ><span
-                                            data-mask-src="assets/img/logo.svg"
-                                            className="mask-icon"
-                                        ></span>
-                                        <Image src="/assets/img/yellow_only_text_2_PNG.png" alt="Work Cleverly" width={196} height={46} />
-                                            </a>
+                                        <Link className="icon-masking" href="/home">
+                                            <Image src="/assets/img/Workcleverly_png2.png" alt="Work Cleverly" width={180} height={46} />
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className="col-auto">

@@ -10,12 +10,10 @@ export default function Footer() {
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-xl-3">
-                            <div className="footer-logo">
-                                <a className="icon-masking" href="index.html"
-                                ><span
-                                    data-mask-src="assets/img/logo-white.svg"
-                                    className="mask-icon"></span><Image src="/assets/img/logo-white.svg" alt="Webteck" width={194} height={46}
-                                    /></a>
+                            <div className="footer-logo footer-logo-sub">
+                                <Link className="icon-masking" href="/home">
+                                    <Image src="/assets/img/Workcleverly_png2.png" alt="Work Cleverly" width={180} height={46} />
+                                </Link>
                             </div>
                         </div>
                         <div className="col-xl-9">

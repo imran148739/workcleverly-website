@@ -7825,7 +7825,8 @@ a.text-theme:hover,
     content: "";
     height: 100%;
     width: calc(100% - 10px);
-    background-color: var(--title-color);
+    /* background-color: var(--title-color); */
+    background-color: white;
     position: absolute;
     top: 0;
     left: 0;
@@ -38517,4 +38518,8 @@ border-bottom: 1px solid var(--smoke-color2);
 
 .service-card-height {
     height: 852px!important;
+}
+
+.footer-logo-sub {
+    padding: 20px 0px 20px 0 !important;
 }

@@ -87,15 +87,37 @@ export default function Footer() {
                                 <h3 className="widget_title">IT SERVICES</h3>
                                 <div className="menu-all-pages-container">
                                     <ul className="menu">
-                                        <li><a href="service-details.html">Web Development</a></li>
+                                        <li><Link href="/services">Data Analytics</Link></li>
                                         <li>
-                                            <a href="service-details.html">Business Development</a>
+                                            <Link href="/services">Artificial Intelligence & <br/> Machine Learning</Link>
                                         </li>
                                         <li>
-                                            <a href="service-details.html">Product Management</a>
+                                            <Link href="/services">Digital MBusiness Intelligence <br/>(BI) Solutionsarketing</Link>
                                         </li>
-                                        <li><a href="service-details.html">UI/UX Design</a></li>
-                                        <li><a href="service-details.html">Cloud services</a></li>
+                                        <li><Link href="/services">AI-Powered Chatbots</Link></li>
+                                        <li><Link href="/services">Cloud servicCloud Infrastructure<br/> & Modernizationes</Link></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {/* <div className="widget widget_nav_menu footer-widget">
+                                <h3 className="widget_title">Quick Links</h3>
+                                <div className="menu-all-pages-container">
+                                    <ul className="menu">
+                                        <li><a href="about.html">Home</a></li>
+                                        <li><a href="team.html">About Us</a></li>
+                                        <li><a href="project.html">Services</a></li>
+                                        <li><a href="faq.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div> */}
+                        </div>
+                        <div className="col-md-4 col-xl-auto">
+                            <div className="widget widget_nav_menu footer-widget">
+                                <h3 className="widget_title">IT SERVICES</h3>
+                                <div className="menu-all-pages-container">
+                                    <ul className="menu">
+                                        <li><Link href="/services">ERP Integration<br/> & Optimization</Link></li>
+                                        <li><Link href="/services">Data Platform Migration<br/> & Modernization</Link></li>
                                     </ul>
                                 </div>
                             </div>

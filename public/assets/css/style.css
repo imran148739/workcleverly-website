@@ -1,8 +1,8 @@
 @use "sass:math";
 
 :root {
-    --theme-color:  #fbbd01;
-    --theme-color2: #fbbd01;
+    --theme-color:  #f6be02;
+    --theme-color2: #f6be02;
     --title-color: #141D38;
     --body-color: #737887;
     --smoke-color: #F5F5F5;

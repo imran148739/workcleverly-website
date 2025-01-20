@@ -1,14 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/home',
-        permanent: true,
-      },
-    ];
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  pwa: {
+    dest: "public",
+    disable: process.env.NODE_ENV === "development",
   },
 };
 

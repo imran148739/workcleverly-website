@@ -1,8 +1,8 @@
 @use "sass:math";
 
 :root {
-    --theme-color: #684DF4;
-    --theme-color2: #684DF4;
+    --theme-color:  #f1cd55;
+    --theme-color2: #f1cd55;
     --title-color: #141D38;
     --body-color: #737887;
     --smoke-color: #F5F5F5;
@@ -3387,7 +3387,7 @@ hr.title-line {
     height: 100%;
     width: 100%;
     mix-blend-mode: hue;
-    background: var(--theme-color);
+    /* background: var(--theme-color); */
     top: 0
 }
 

@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                     name='viewport'
                     content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover'
                 />
-                <link
+                {/* <link
                     rel="apple-touch-icon"
                     sizes="57x57"
                     href="/assets/img/favicons/apple-icon-57x57.png"
@@ -73,36 +73,36 @@ function MyApp({ Component, pageProps }: AppProps) {
                     rel="apple-touch-icon"
                     sizes="180x180"
                     href="/assets/img/favicons/apple-icon-180x180.png"
-                />
+                /> */}
                 <link
                     rel="icon"
                     type="image/png"
                     sizes="192x192"
-                    href="/assets/img/favicons/android-icon-192x192.png"
+                    href="/icons/android-chrome-192x192.png"
                 />
                 <link
                     rel="icon"
                     type="image/png"
                     sizes="32x32"
-                    href="/assets/img/favicons/favicon-32x32.png"
+                    href="/icons/favicon-32x32.png"
                 />
-                <link
+                {/* <link
                     rel="icon"
                     type="image/png"
                     sizes="96x96"
                     href="/assets/img/favicons/favicon-96x96.png"
-                />
+                /> */}
                 <link
                     rel="icon"
                     type="image/png"
                     sizes="16x16"
-                    href="/assets/img/favicons/favicon-16x16.png"
+                    href="/icons/favicon-16x16.png"
                 />
-                <link rel="manifest" href="assets/img/favicons/manifest.json" />
+                <link rel="manifest" href="/manifest.json" />
                 <meta name="msapplication-TileColor" content="#ffffff" />
                 <meta
-                    name="msapplication-TileImage"
-                    content="assets/img/favicons/ms-icon-144x144.png"
+                    name="Work-Cleverly"
+                    content="/icons/android-chrome-192x192.png"
                 />
                 <meta name="theme-color" content="#ffffff" />
                 <link rel="preconnect" href="https://fonts.googleapis.com/" />

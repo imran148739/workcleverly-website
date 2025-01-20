@@ -163,8 +163,8 @@ export default function About() {
                                 <div className="testi-box">
                                     <div className="testi-box_img">
                                         <Image
-                                            src="/assets/img/mission vission/our_mission.jpg"
-                                            alt="Avater"
+                                            src="/assets/img/mission_vission/our_mission.jpg"
+                                            alt="Avatar"
                                             width={180}
                                             height={180}
                                         />
@@ -193,8 +193,8 @@ export default function About() {
                                 <div className="testi-box">
                                     <div className="testi-box_img">
                                         <Image
-                                            src="/assets/img/mission vission/our_mission.jpg"
-                                            alt="Avater"
+                                            src="/assets/img/mission_vission/our_vision.jpg"
+                                            alt="Avatar"
                                             width={180}
                                             height={180}
                                         />

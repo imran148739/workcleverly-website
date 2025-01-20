@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+// import PWAInstallPrompt from "../pages/pwa_install_prompt";
 
 export default function Home() {
 
@@ -14,6 +15,8 @@ export default function Home() {
 
   return (
     <div>
+
+      {/* <PWAInstallPrompt /> */}
 
       <div className="th-hero-wrapper hero-4" id="hero">
         <div className="body-particle" id="body-particle"></div>
@@ -297,6 +300,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
 
     </div>
   );

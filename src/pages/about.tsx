@@ -73,7 +73,7 @@ export default function About() {
                         <div className="col-xl-6 mb-30 mb-xl-0">
                             <div className="img-box1">
                                 <div className="img1">
-                                    <Image src="/assets/img/normal/about_1_1.png" alt="About" width={530} height={530} />
+                                    <Image src="/assets/img/normal/who_we_are.png" alt="About" width={530} height={530} />
                                 </div>
                                 <div className="shape1">
                                     <Image src="/assets/img/normal/about_shape_1.png" alt="shape" width={826} height={1169} />
@@ -504,7 +504,7 @@ export default function About() {
                         <div className="col-xl-6">
                             <div className="feature-thumb14_wrapp">
                                 <div className="feature-thumb14-1">
-                                    <Image src="/assets/img/normal/feature-img-12-1.jpg" alt="img" width={561} height={432} />
+                                    <Image src="/assets/img/normal/our_journey.jpg" alt="img" width={561} height={432} />
                                 </div>
                                 <div className="feature-thumb14-2 jump">
                                     <Image src="/assets/img/normal/feature-img-12-2.jpg" alt="img" width={209} height={173} />

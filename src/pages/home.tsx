@@ -98,7 +98,7 @@ export default function Home() {
                 <div className="process-card">
                   <div className="pulse"></div>
                   <div className="process-card_icon">
-                    <Image src="/assets/img/icon/process_box_1.png" alt="icon" width={76} height={66} />
+                    <Image src="/assets/img/icon/data-analytics.png" alt="icon" width={76} height={66} />
                   </div>
                   <h2 className="box-title">Data Analytics</h2>
                   <p className="process-card_text">
@@ -110,7 +110,7 @@ export default function Home() {
                 <div className="process-card">
                   <div className="pulse"></div>
                   <div className="process-card_icon">
-                    <Image src="/assets/img/icon/process_box_2.png" alt="icon" width={72} height={66} />
+                    <Image src="/assets/img/icon/artificial_intelligence.png" alt="icon" width={72} height={66} />
                   </div>
                   <h2 className="box-title">Artificial Intelligence & Machine Learning</h2>
                   <p className="process-card_text">
@@ -122,7 +122,7 @@ export default function Home() {
                 <div className="process-card">
                   <div className="pulse"></div>
                   <div className="process-card_icon">
-                    <Image src="/assets/img/icon/process_box_3.png" alt="icon" width={90} height={66} />
+                    <Image src="/assets/img/icon/business_intelligence_solutions.png" alt="icon" width={90} height={66} />
                   </div>
                   <h2 className="box-title">Business Intelligence Solutions</h2>
                   <p className="process-card_text">
@@ -134,7 +134,7 @@ export default function Home() {
                 <div className="process-card">
                   <div className="pulse"></div>
                   <div className="process-card_icon">
-                    <Image src="/assets/img/icon/process_box_4.png" alt="icon" width={57} height={66} />
+                    <Image src="/assets/img/icon/ai_powered_chatbots.png" alt="icon" width={57} height={66} />
                   </div>
                   <h2 className="box-title">AI-Powered Chatbots</h2>
                   <p className="process-card_text">
@@ -153,7 +153,7 @@ export default function Home() {
                 <div className="process-card">
                   <div className="pulse"></div>
                   <div className="process-card_icon">
-                    <Image src="/assets/img/icon/process_box_1.png" alt="icon" width={76} height={66} />
+                    <Image src="/assets/img/icon/cloud_infrastructure_modernization.png" alt="icon" width={76} height={66} />
                   </div>
                   <h2 className="box-title">Cloud Infrastructure & Modernization</h2>
                   <p className="process-card_text">
@@ -165,7 +165,7 @@ export default function Home() {
                 <div className="process-card">
                   <div className="pulse"></div>
                   <div className="process-card_icon">
-                    <Image src="/assets/img/icon/process_box_2.png" alt="icon" width={72} height={66} />
+                    <Image src="/assets/img/icon/erp_integration_optimization.png" alt="icon" width={72} height={66} />
                   </div>
                   <h2 className="box-title">ERP Integration & Optimization</h2>
                   <p className="process-card_text">
@@ -177,7 +177,7 @@ export default function Home() {
                 <div className="process-card">
                   <div className="pulse"></div>
                   <div className="process-card_icon">
-                    <Image src="/assets/img/icon/process_box_3.png" alt="icon" width={90} height={66} />
+                    <Image src="/assets/img/icon/data_platform_migration_modernization.png" alt="icon" width={90} height={66} />
                   </div>
                   <h2 className="box-title">Data Platform Migration & Modernization</h2>
                   <p className="process-card_text">

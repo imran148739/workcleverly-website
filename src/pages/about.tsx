@@ -78,12 +78,12 @@ export default function About() {
                                 <div className="shape1">
                                     <Image src="/assets/img/normal/about_shape_1.png" alt="shape" width={826} height={1169} />
                                 </div>
-                                <div className="year-counter">
+                                {/* <div className="year-counter">
                                     <h3 className="year-counter_number">
                                         <span className="counter-number"></span>
                                     </h3>
                                     <p className="year-counter_text"></p>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className="col-xl-6">
@@ -313,7 +313,7 @@ export default function About() {
                                         >Get Started</a> */}
                                     </div>
                                     <div className="process-image th-anim">
-                                        <Image src="/assets/img/normal/process_img_1.jpg" alt="" width={344} height={300} />
+                                        <Image src="/assets/img/normal/innovation.jpg" alt="" width={344} height={300} />
                                     </div>
                                 </div>
                             </div>
@@ -346,7 +346,7 @@ export default function About() {
                                         >Get Started</a> */}
                                     </div>
                                     <div className="process-image th-anim">
-                                        <Image src="/assets/img/normal/process_img_2.jpg" alt="" width={344} height={300} />
+                                        <Image src="/assets/img/normal/customer_centricity.jpg" alt="" width={344} height={300} />
                                     </div>
                                 </div>
                             </div>
@@ -379,7 +379,7 @@ export default function About() {
                                         >Get Started</a> */}
                                     </div>
                                     <div className="process-image th-anim">
-                                        <Image src="/assets/img/normal/process_img_3.jpg" alt="" width={344} height={300} />
+                                        <Image src="/assets/img/normal/Integrity.jpg" alt="" width={344} height={300} />
                                     </div>
                                 </div>
                             </div>
@@ -412,7 +412,7 @@ export default function About() {
                                         >Get Started</a> */}
                                     </div>
                                     <div className="process-image th-anim">
-                                        <Image src="/assets/img/normal/process_img_4.jpg" alt="" width={344} height={300} />
+                                        <Image src="/assets/img/normal/excellence.jpeg" alt="" width={344} height={300} />
                                     </div>
                                 </div>
                             </div>
@@ -520,7 +520,7 @@ export default function About() {
                     <div className="row gy-40 align-items-center">
                         <div className="col-xl-5">
                             <div className="team-featured-img">
-                                <Image src="/assets/img/team/team_featured.jpg" alt="Team" width={494} height={468} />
+                                <Image src="/assets/img/team/our_team.jpg" alt="Team" width={494} height={468} />
                             </div>
                         </div>
                         <div className="col-xl-7">

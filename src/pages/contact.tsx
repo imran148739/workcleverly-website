@@ -8,6 +8,7 @@ export default function Contact() {
 
     const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
     const [status, setStatus] = useState('');
+    const [loading, setLoading] = useState(false); // Add loading state
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -15,6 +16,7 @@ export default function Contact() {
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        setLoading(true); // Set loading to true when submit is clicked
 
         try {
             const response = await fetch('/api/contact', {
@@ -34,6 +36,8 @@ export default function Contact() {
             }
         } catch (error) {
             toast.error('❌ An error occurred. Please try again.');
+        } finally {
+            setLoading(false); // Reset loading state after the request is completed
         }
     };
 
@@ -192,14 +196,19 @@ export default function Contact() {
                                         <i className="fal fa-comment"></i>
                                     </div>
                                     <div className="form-btn text-xl-start text-center col-12">
-                                        <button className="th-btn" type="submit">
-                                            Send Message<i className="fa-regular fa-arrow-right ms-2"></i>
+                                        <button
+                                            className="th-btn"
+                                            type="submit"
+                                            disabled={loading} // Disable the button while loading
+                                        >
+                                            {loading ? 'Sending...' : 'Send Message'}
+                                            <i className="fa-regular fa-arrow-right ms-2"></i>
                                         </button>
                                     </div>
                                 </div>
                                 <p className="form-messages mb-0 mt-3"></p>
                             </form>
-                            <ToastContainer  autoClose={3000} />
+                            <ToastContainer autoClose={3000} />
                         </div>
                     </div>
                 </div>

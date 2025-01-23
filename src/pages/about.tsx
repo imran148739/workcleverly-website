@@ -504,7 +504,7 @@ export default function About() {
                         <div className="col-xl-6">
                             <div className="feature-thumb14_wrapp">
                                 <div className="feature-thumb14-1">
-                                    <Image src="/assets/img/normal/our_journey.jpg" alt="img" width={561} height={432} />
+                                    <Image src="/assets/img/normal/our_journeyy.jpg" alt="img" width={561} height={432} />
                                 </div>
                                 <div className="feature-thumb14-2 jump">
                                     <Image src="/assets/img/normal/feature-img-12-2.jpg" alt="img" width={209} height={173} />

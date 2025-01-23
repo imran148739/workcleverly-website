@@ -1,8 +1,41 @@
-import { useEffect } from 'react';
+import { useEffect, useState, ChangeEvent, FormEvent } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
+
+    const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
+    const [status, setStatus] = useState('');
+
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                setStatus('Email sent successfully!');
+                toast.success('✅ Email sent successfully!', { position: 'top-right' });
+                setFormData({ name: '', email: '', phone: '', message: '' });
+            } else {
+                toast.error('❌ Failed to send email. Please try again.');
+                setStatus('Failed to send email. Please try again.');
+            }
+        } catch (error) {
+            toast.error('❌ An error occurred. Please try again.');
+        }
+    };
 
     const router = useRouter()
 
@@ -71,7 +104,9 @@ export default function Contact() {
             </div>
             <div
                 className="bg-smoke space"
-                data-bg-src="assets/img/bg/contact_bg_1.png"
+                style={{
+                    backgroundImage: 'url("/assets/img/bg/contact_bg_1.png")'
+                }}
                 id="contact-sec"
             >
                 <div className="container">
@@ -95,11 +130,7 @@ export default function Contact() {
                                     Let’s discuss how we can help you achieve your goals.
                                 </p>
                             </div>
-                            <form
-                                action="https://html.themeholy.com/webteck/demo/mail.php"
-                                method="POST"
-                                className="contact-form ajax-contact"
-                            >
+                            <form onSubmit={handleSubmit} className="contact-form">
                                 <div className="row">
                                     <div className="form-group col-md-6">
                                         <input
@@ -107,7 +138,7 @@ export default function Contact() {
                                             className="form-control"
                                             name="name"
                                             id="name"
-                                            placeholder="Your Name"
+                                            placeholder="Your Name" value={formData.name} onChange={handleChange} required
                                         />
                                         <i className="fal fa-user"></i>
                                     </div>
@@ -117,7 +148,7 @@ export default function Contact() {
                                             className="form-control"
                                             name="email"
                                             id="email"
-                                            placeholder="Email Address"
+                                            placeholder="Email Address" value={formData.email} onChange={handleChange} required
                                         />
                                         <i className="fal fa-envelope"></i>
                                     </div>
@@ -140,11 +171,12 @@ export default function Contact() {
                                     </div> */}
                                     <div className="form-group col-md-6">
                                         <input
-                                            type="tel"
+                                            type="number"
                                             className="form-control"
-                                            name="number"
-                                            id="number"
-                                            placeholder="Phone Number"
+                                            name="phone"
+                                            id="phone"
+                                            inputMode="numeric"
+                                            placeholder="Phone Number" value={formData.phone} onChange={handleChange} required
                                         />
                                         <i className="fal fa-phone"></i>
                                     </div>
@@ -155,18 +187,19 @@ export default function Contact() {
                                             cols={30}
                                             rows={3}
                                             className="form-control"
-                                            placeholder="Your Message"
+                                            placeholder="Your Message" value={formData.message} onChange={handleChange} required
                                         ></textarea>
                                         <i className="fal fa-comment"></i>
                                     </div>
                                     <div className="form-btn text-xl-start text-center col-12">
-                                        <button className="th-btn">
+                                        <button className="th-btn" type="submit">
                                             Send Message<i className="fa-regular fa-arrow-right ms-2"></i>
                                         </button>
                                     </div>
                                 </div>
                                 <p className="form-messages mb-0 mt-3"></p>
                             </form>
+                            <ToastContainer  autoClose={3000} />
                         </div>
                     </div>
                 </div>

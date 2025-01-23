@@ -22,7 +22,7 @@ export default function Services() {
                         <h1 className="breadcumb-title">Our Services</h1><br />
                         <h6 style={{ color: '#abacaf' }}>Intelligent Solutions to Drive Your Success <br /> From Data to AI, We Deliver Scalable, Secure, and Impactful Technology Solutions.</h6>
                         <ul className="breadcumb-menu">
-                            <li><a href="index.html">Home</a></li>
+                            <li><Link href="/home">Home</Link></li>
                             <li>Services</li>
                         </ul>
                     </div>
@@ -36,17 +36,17 @@ export default function Services() {
                             <div className="service-card service-card-height">
                                 <div className="service-card_number">01</div>
                                 <div className="shape-icon">
-                                    <Image src="/assets/img/icon/service_card_1.svg" alt="Icon" width={40} height={36} />
-                                    <span className="dots"></span>
+                                    <Image src="/assets/img/icon/data-analytics.webp" alt="Icon" width={100} height={36} />
+                                    {/* <span className="dots"></span> */}
                                 </div>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Data Analytics</a>
+                                    <a href="#">Data Analytics</a>
                                 </h3>
                                 <p className="service-card_text">
                                     Harness the power of your data with advanced analytics solutions. We help businesses transform raw data into actionable insights, enabling smarter decision-making and improved operational efficiency.
                                 </p>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Our Expertise</a>
+                                    <a href="#">Our Expertise</a>
                                 </h3>
                                 <ul>
                                     <li>Predictive Analytics</li>
@@ -55,7 +55,7 @@ export default function Services() {
                                     <li>Big Data Solutions (Hadoop, Spark)</li>
                                 </ul>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Business Impact</a>
+                                    <a href="#">Business Impact</a>
                                 </h3>
                                 <ul>
                                     <li>Optimize supply chain management.</li>
@@ -74,17 +74,17 @@ export default function Services() {
                             <div className="service-card service-card-height">
                                 <div className="service-card_number">02</div>
                                 <div className="shape-icon">
-                                    <Image src="/assets/img/icon/service_card_2.svg" alt="Icon" width={40} height={40} />
-                                    <span className="dots"></span>
+                                    <Image src="/assets/img/icon/artificial_intelligence.webp" alt="Icon" width={100} height={40} />
+                                    {/* <span className="dots"></span> */}
                                 </div>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Artificial Intelligence & Machine Learning</a>
+                                    <a href="#">Artificial Intelligence & Machine Learning</a>
                                 </h3>
                                 <p className="service-card_text">
                                     Leverage AI and ML to automate tasks, predict trends, and create personalized customer experiences. From chatbots to advanced predictive models, our solutions are built to drive innovation.
                                 </p>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Our Expertise</a>
+                                    <a href="#">Our Expertise</a>
                                 </h3>
                                 <ul>
                                     <li>Natural Language Processing (NLP)</li>
@@ -93,7 +93,7 @@ export default function Services() {
                                     <li>Recommendation Engines</li>
                                 </ul>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Business Impact</a>
+                                    <a href="#">Business Impact</a>
                                 </h3>
                                 <ul>
                                     <li>Reduce operational costs with intelligent automation.</li>
@@ -110,17 +110,17 @@ export default function Services() {
                             <div className="service-card service-card-height">
                                 <div className="service-card_number">03</div>
                                 <div className="shape-icon">
-                                    <Image src="/assets/img/icon/service_card_3.svg" alt="Icon" width={40} height={40} />
-                                    <span className="dots"></span>
+                                    <Image src="/assets/img/icon/digital_business_intelligence.webp" alt="Icon" width={100} height={40} />
+                                    {/* <span className="dots"></span> */}
                                 </div>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Digital MBusiness Intelligence (BI) Solutionsarketing</a>
+                                    <a href="#">Digital Business Intelligence (BI) Solutions marketing</a>
                                 </h3>
                                 <p className="service-card_text">
                                     Simplify decision-making with interactive dashboards and analytics tools. Our BI solutions provide real-time insights into key performance metrics to help businesses stay agile.
                                 </p>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Our Expertise</a>
+                                    <a href="#">Our Expertise</a>
                                 </h3>
                                 <ul>
                                     <li>Custom BI Dashboards</li>
@@ -128,7 +128,7 @@ export default function Services() {
                                     <li>Integration with Legacy Systems</li>
                                 </ul>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Business Impact</a>
+                                    <a href="#">Business Impact</a>
                                 </h3>
                                 <ul>
                                     <li>Enable faster, data-driven decisions.</li>
@@ -145,17 +145,17 @@ export default function Services() {
                             <div className="service-card service-card-height">
                                 <div className="service-card_number">04</div>
                                 <div className="shape-icon">
-                                    <Image src="/assets/img/icon/service_card_4.svg" alt="Icon" width={40} height={40} />
-                                    <span className="dots"></span>
+                                    <Image src="/assets/img/icon/chatbot.webp" alt="Icon" width={100} height={40} />
+                                    {/* <span className="dots"></span> */}
                                 </div>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">AI-Powered Chatbots</a>
+                                    <a href="#">AI-Powered Chatbots</a>
                                 </h3>
                                 <p className="service-card_text">
                                     Automate customer interactions with intelligent, multilingual chatbots. Our AI-powered bots deliver seamless experiences across platforms, reducing response time and improving satisfaction.
                                 </p>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Our Expertise</a>
+                                    <a href="#">Our Expertise</a>
                                 </h3>
                                 <ul>
                                     <li>Custom Bot Development</li>
@@ -163,7 +163,7 @@ export default function Services() {
                                     <li>Voice and Text-Based Interfaces</li>
                                 </ul>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Business Impact</a>
+                                    <a href="#">Business Impact</a>
                                 </h3>
                                 <ul>
                                     <li>Enhance customer support with 24/7 assistance.</li>
@@ -180,17 +180,17 @@ export default function Services() {
                             <div className="service-card service-card-height">
                                 <div className="service-card_number">05</div>
                                 <div className="shape-icon">
-                                    <Image src="/assets/img/icon/service_card_5.svg" alt="Icon" width={40} height={40} />
-                                    <span className="dots"></span>
+                                    <Image src="/assets/img/icon/cloud-infrastructure.webp" alt="Icon" width={100} height={40} />
+                                    {/* <span className="dots"></span> */}
                                 </div>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Cloud Infrastructure & Modernization</a>
+                                    <a href="#">Cloud Infrastructure & Modernization</a>
                                 </h3>
                                 <p className="service-card_text">
                                     Modernize your business with scalable, secure, and efficient cloud infrastructure. Whether you’re migrating to the cloud or optimizing existing systems, we deliver solutions tailored to your needs.
                                 </p>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Our Expertise</a>
+                                    <a href="#">Our Expertise</a>
                                 </h3>
                                 <ul>
                                     <li>Cloud Migration (AWS, Azure, Google Cloud)</li>
@@ -198,7 +198,7 @@ export default function Services() {
                                     <li>Cloud Security and Compliance</li>
                                 </ul>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Business Impact</a>
+                                    <a href="#">Business Impact</a>
                                 </h3>
                                 <ul>
                                     <li>Reduce infrastructure costs.</li>
@@ -215,17 +215,17 @@ export default function Services() {
                             <div className="service-card service-card-height">
                                 <div className="service-card_number">06</div>
                                 <div className="shape-icon">
-                                    <Image src="/assets/img/icon/service_card_6.svg" alt="Icon" width={40} height={40} />
-                                    <span className="dots"></span>
+                                    <Image src="/assets/img/icon/erp.avif" alt="Icon" width={100} height={40} />
+                                    {/* <span className="dots"></span> */}
                                 </div>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">ERP Integration & Optimization</a>
+                                    <a href="#">ERP Integration & Optimization</a>
                                 </h3>
                                 <p className="service-card_text">
                                     Streamline your business processes with ERP solutions customized to your operations. Our ERP services ensure seamless integration and optimization of enterprise functions.
                                 </p>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Our Expertise</a>
+                                    <a href="#">Our Expertise</a>
                                 </h3>
                                 <ul>
                                     <li>ERP Customization</li>
@@ -233,7 +233,7 @@ export default function Services() {
                                     <li>Process Automation</li>
                                 </ul>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Business Impact</a>
+                                    <a href="#">Business Impact</a>
                                 </h3>
                                 <ul>
                                     <li>Increase operational efficiency.</li>
@@ -250,17 +250,17 @@ export default function Services() {
                             <div className="service-card service-card-height">
                                 <div className="service-card_number">07</div>
                                 <div className="shape-icon">
-                                    <Image src="/assets/img/icon/service_card_7.svg" alt="Icon" width={40} height={40} />
-                                    <span className="dots"></span>
+                                    <Image src="/assets/img/icon/data_platform_migration.webp" alt="Icon" width={100} height={40} />
+                                    {/* <span className="dots"></span> */}
                                 </div>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Data Platform Migration & Modernization</a>
+                                    <a href="#">Data Platform Migration & Modernization</a>
                                 </h3>
                                 <p className="service-card_text">
                                     Upgrade your legacy systems to modern data platforms for improved performance, scalability, and security.
                                 </p>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Our Expertise</a>
+                                    <a href="#">Our Expertise</a>
                                 </h3>
                                 <ul>
                                     <li>Legacy System Migration</li>
@@ -268,7 +268,7 @@ export default function Services() {
                                     <li>Real-Time Data Integration</li>
                                 </ul>
                                 <h3 className="box-title">
-                                    <a href="service-details.html">Business Impact</a>
+                                    <a href="#">Business Impact</a>
                                 </h3>
                                 <ul>
                                     <li>Future-proof your data architecture.</li>

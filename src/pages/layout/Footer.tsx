@@ -92,10 +92,10 @@ export default function Footer() {
                                             <Link href="/services">Artificial Intelligence & <br/> Machine Learning</Link>
                                         </li>
                                         <li>
-                                            <Link href="/services">Digital MBusiness Intelligence <br/>(BI) Solutionsarketing</Link>
+                                            <Link href="/services">Digital Business Intelligence <br/>(BI) Solutions marketing</Link>
                                         </li>
                                         <li><Link href="/services">AI-Powered Chatbots</Link></li>
-                                        <li><Link href="/services">Cloud servicCloud Infrastructure<br/> & Modernizationes</Link></li>
+                                        <li><Link href="/services">Cloud Infrastructure<br/> & Modernization</Link></li>
                                     </ul>
                                 </div>
                             </div>

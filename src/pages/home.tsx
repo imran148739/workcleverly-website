@@ -198,15 +198,15 @@ export default function Home() {
               <div className="img-box5">
                 <Image
                   className="tilt-active"
-                  src="/assets/img/normal/why_2_1.png"
-                  alt="Why" width={619} height={564}
+                  src="/assets/img/normal/why_choose_us.jpg"
+                  alt="Why" width={490} height={564}
                 />
-                <div className="year-counter">
+                {/* <div className="year-counter">
                   <h3 className="year-counter_number">
                     <span className="counter-number"></span>
                   </h3>
                   <p className="year-counter_text"></p>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-xl-6">

@@ -18,7 +18,7 @@ export default async function handler(req, res) {
         // Email options
         const mailOptions = {
             from: email,
-            to: 'imran148739@gmail.com',
+            to: 'zayeem@workcleverly.ai',
             subject: `New Contact Form Submission from ${name}`,
             text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`,
         };

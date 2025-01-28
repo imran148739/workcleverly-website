@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function Contact() {
 
     const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
-    const [status, setStatus] = useState('');
+    // const [status, setStatus] = useState('');
     const [loading, setLoading] = useState(false); // Add loading state
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -27,14 +27,15 @@ export default function Contact() {
 
             const data = await response.json();
             if (data.success) {
-                setStatus('Email sent successfully!');
+                // setStatus('Email sent successfully!');
                 toast.success('✅ Email sent successfully!', { position: 'top-right' });
                 setFormData({ name: '', email: '', phone: '', message: '' });
             } else {
                 toast.error('❌ Failed to send email. Please try again.');
-                setStatus('Failed to send email. Please try again.');
+                // setStatus('Failed to send email. Please try again.');
             }
         } catch (error) {
+            console.error(error);
             toast.error('❌ An error occurred. Please try again.');
         } finally {
             setLoading(false); // Reset loading state after the request is completed
@@ -45,7 +46,7 @@ export default function Contact() {
 
     useEffect(() => {
         router.push('/contact', undefined, { shallow: true })
-    }, [router.query.counter]);
+    }, [router, router.query.counter]);
 
     return (
         <div>

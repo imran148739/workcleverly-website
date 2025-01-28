@@ -13,13 +13,13 @@ export default function PWAInstallPrompt() {
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
-        const handler = (event: BeforeInstallPromptEvent) => {
-            event.preventDefault();
-            setDeferredPrompt(event);
-            setOpen(true); // Show popup when prompt is available
-        };
+        // const handler = (event: BeforeInstallPromptEvent) => {
+        //     event.preventDefault();
+        //     setDeferredPrompt(event);
+        //     setOpen(true); // Show popup when prompt is available
+        // };
 
-        window.addEventListener("beforeinstallprompt", handler);
+        // window.addEventListener("beforeinstallprompt", handler);
         window.addEventListener("appinstalled", () => {
             console.log("PWA installed");
             setDeferredPrompt(null);
@@ -27,7 +27,7 @@ export default function PWAInstallPrompt() {
         });
 
         return () => {
-            window.removeEventListener("beforeinstallprompt", handler);
+            // window.removeEventListener("beforeinstallprompt", handler);
         };
     }, []);
 

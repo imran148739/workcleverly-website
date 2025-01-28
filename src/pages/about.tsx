@@ -8,46 +8,43 @@ export default function About() {
     const router = useRouter()
 
     useEffect(() => {
-        if (router.query.reload === 'true') {
-            router.reload();
-        }
-    }, [router.query]);
+        // Always do navigations after the first render
+        router.push('/about', undefined, { shallow: true })
+    }, [router, router.query.counter]);
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        const tabs = document.querySelectorAll('.nav-link');
-        let currentIndex = 0;
+    // const tabs = document.querySelectorAll('.nav-link');
+    // let currentIndex = 0;
 
-        const switchTab = () => {
-            tabs[currentIndex].classList.remove('active'); // Remove active class from current tab
-            const targetId = tabs[currentIndex].getAttribute('data-bs-target');
+    // const switchTab = () => {
+    //     tabs[currentIndex].classList.remove('active'); // Remove active class from current tab
+    //     const targetId = tabs[currentIndex].getAttribute('data-bs-target');
 
-            // Check if the element exists before removing classes
-            const currentTabContent = document.querySelector(targetId);
-            if (currentTabContent) {
-                currentTabContent.classList.remove('show', 'active');
-            }
+    //     // Check if the element exists before removing classes
+    //     const currentTabContent = document.querySelector(targetId);
+    //     if (currentTabContent) {
+    //         currentTabContent.classList.remove('show', 'active');
+    //     }
 
-            currentIndex = (currentIndex + 1) % tabs.length; // Move to next tab, loop back to 0 if at end
+    //     currentIndex = (currentIndex + 1) % tabs.length; // Move to next tab, loop back to 0 if at end
 
-            tabs[currentIndex].classList.add('active'); // Add active class to new tab
-            const newTargetId = tabs[currentIndex].getAttribute('data-bs-target');
+    //     tabs[currentIndex].classList.add('active'); // Add active class to new tab
+    //     const newTargetId = tabs[currentIndex].getAttribute('data-bs-target');
 
-            // Check if the new element exists before adding classes
-            const newTabContent = document.querySelector(newTargetId);
-            if (newTabContent) {
-                newTabContent.classList.add('show', 'active');
-            }
-        };
+    //     // Check if the new element exists before adding classes
+    //     const newTabContent = document.querySelector(newTargetId);
+    //     if (newTabContent) {
+    //         newTabContent.classList.add('show', 'active');
+    //     }
+    // };
 
-        const interval = setInterval(switchTab, 2000); // Change tab every 3 seconds
+    // const interval = setInterval(switchTab, 2000); // Change tab every 3 seconds
 
-        router.push('/about', undefined, { shallow: true });
-
-        return () => clearInterval(interval); // Cleanup on component unmount
+    //     return () => clearInterval(interval); // Cleanup on component unmount
 
 
-    }, [router.query.counter]);
+    // }, [router.query.counter]);
 
 
 
@@ -67,13 +64,14 @@ export default function About() {
                     </div>
                 </div>
             </div>
-            <div className="overflow-hidden space" id="about-sec">
+
+            <div className="overflow-hidden" id="about-sec" style={{ marginTop: '50px' }}>
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-xl-6 mb-30 mb-xl-0">
                             <div className="img-box1">
                                 <div className="img1">
-                                    <Image src="/assets/img/normal/who_we_are.png" alt="About" width={530} height={530} />
+                                    <Image src="/assets/img/normal/who_we_are.jpeg" alt="About" width={530} height={530} />
                                 </div>
                                 <div className="shape1">
                                     <Image src="/assets/img/normal/about_shape_1.png" alt="shape" width={826} height={1169} />
@@ -155,294 +153,144 @@ export default function About() {
                 </div>
             </div>
 
-            <section className="bg-auto space space-sub" data-bg-src="/assets/img/bg/testi_bg_2.png">
+            <section className="">
+
+                <div className="row">
+                    <div className="col">
+                        <div className="shape-mockup">
+                            <Image src="/assets/img/shape/square_1.png" alt="shape" width={534} height={849} />
+                        </div>
+                    </div>
+                    <div className="col">
+                        <div className="shape-mockup">
+                            <Image src="/assets/img/shape/tech_shape_1.png" alt="shape" width={767} height={485} />
+                        </div>
+                    </div>
+                </div>
+
                 <div className="container">
-                    <div className="row">
-                        <div className="col-6">
-                            <div className="swiper-slide">
-                                <div className="testi-box">
-                                    <div className="testi-box_img">
-                                        <Image
-                                            src="/assets/img/mission_vission/our_mission.jpg"
-                                            alt="Avatar"
-                                            width={180}
-                                            height={180}
-                                        />
-                                        <div className="testi-box_quote">
-                                            <Image
-                                                src="/assets/img/icon/quote_left_2.svg"
-                                                alt="quote"
-                                                width={26}
-                                                height={20}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="testi-box_content">
-                                        <h3 className="box-title box-title-sub">Our Mission</h3>
-                                        <p className="testi-box_text">
-                                            To empower businesses with intelligent, data-driven solutions that
-                                            accelerate growth, optimize operations, and create a sustainable
-                                            competitive edge.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-6">
-                            <div className="swiper-slide">
-                                <div className="testi-box">
-                                    <div className="testi-box_img">
-                                        <Image
-                                            src="/assets/img/mission_vission/our_vision.jpg"
-                                            alt="Avatar"
-                                            width={180}
-                                            height={180}
-                                        />
-                                        <div className="testi-box_quote">
-                                            <Image
-                                                src="/assets/img/icon/quote_left_2.svg"
-                                                alt="quote"
-                                                width={26}
-                                                height={20}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="testi-box_content">
-                                        <h3 className="box-title box-title-sub">Our Vision</h3>
-                                        <p className="testi-box_text">
-                                            To be the most trusted global partner for digital transformation and AI-driven innovation, enabling businesses to achieve extraordinary success.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section
-                className="process-area5 process-area5-sub"
-                id="process-sec"
-                data-pos-for="cta-area7"
-                data-sec-pos="top-half"
-                data-bg-src="/assets/img/bg/process_bg_2.jpg"
-            >
-                <div className="container th-container4">
                     <div className="title-area text-center">
-                        <span className="sub-title sub-title3">CORE VALUES</span>
-                        <h2 className="sec-title">Our Core Values</h2>
+                        <span className="sub-title"><div className="icon-masking me-2">
+                            <span
+                                className="mask-icon" style={{
+                                    backgroundImage: 'url("/assets/img/theme-img/title_shape_2.svg")'
+                                }}></span>
+                            {/* <Image src="/assets/img/theme-img/title_shape_2.svg" alt="shape" width={27} height={27} /> */}
+                        </div></span>
+                        <h2 className="sec-title"><span className="text-theme fw-normal"></span>
+                        </h2>
                     </div>
-                    <div className="process-tabs-wrapper process-tabs-wrapper-sub">
-                        <div
-                            className="nav nav-tabs process-tabs-tabs"
-                            id="nav-tab"
-                            role="tablist"
-                        >
-                            <button
-                                className="nav-link active"
-                                id="nav-step1-tab"
-                                data-bs-toggle="tab"
-                                data-bs-target="#nav-step1"
-                                type="button"
-                            >
-                                <span className="step">1</span>
-                                <span className="title">Innovation</span>
-                            </button>
-                            <button
-                                className="nav-link"
-                                id="nav-step2-tab"
-                                data-bs-toggle="tab"
-                                data-bs-target="#nav-step2"
-                                type="button"
-                            >
-                                <span className="step">2</span>
-                                <span className="title">Customer Centricity</span>
-                            </button>
-                            <button
-                                className="nav-link"
-                                id="nav-step3-tab"
-                                data-bs-toggle="tab"
-                                data-bs-target="#nav-step3"
-                                type="button"
-                            >
-                                <span className="step">3</span>
-                                <span className="title">Integrity</span>
-                            </button>
-                            <button
-                                className="nav-link"
-                                id="nav-step4-tab"
-                                data-bs-toggle="tab"
-                                data-bs-target="#nav-step4"
-                                type="button"
-                            >
-                                <span className="step">4</span>
-                                <span className="title">Excellence</span>
-                            </button>
-                        </div>
-                        <div className="tab-content" id="nav-tabContent">
-                            <div
-                                className="tab-pane fade show active"
-                                id="nav-step1"
-                                role="tabpanel"
-                            >
-                                <div className="process-wrapper">
-                                    <div className="process-content">
-                                        <div className="title-area mb-15">
-                                            <h5 className="box-title">Innovation</h5>
-                                            <p className="box-text">
-                                                We constantly push the boundaries of technology to deliver cutting-edge solutions.
-                                            </p>
-                                        </div>
-                                        <div className="checklist">
-                                            {/* <ul>
-                                                <li>
-                                                    <i className="far fa-check-circle text-body"></i>Best
-                                                    Service for You
-                                                </li>
-                                                <li>
-                                                    <i className="far fa-check-circle text-body"></i>Keeping
-                                                    Your Team Productive
-                                                </li>
-                                                <li>
-                                                    <i className="far fa-check-circle text-body"></i>Predictable
-                                                    Costs 24/
-                                                </li>
-                                            </ul> */}
-                                        </div>
-                                        {/* <a href="contact.html" className="th-btn style-radius"
-                                        >Get Started</a> */}
-                                    </div>
-                                    <div className="process-image th-anim">
-                                        <Image src="/assets/img/normal/innovation.jpg" alt="" width={344} height={300} />
+                    <div className="row gy-4 justify-content-center">
+                        <div className="col-xl-4 col-md-6">
+                            <div className="price-card">
+                                <div className="price-card_top">
+                                    <h3 className="price-card_title">Mission</h3>
+                                    <div className="particle">
+                                        <div className="price-particle" id="price-p1"></div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="tab-pane fade" id="nav-step2" role="tabpanel">
-                                <div className="process-wrapper">
-                                    <div className="process-content">
-                                        <div className="title-area mb-15">
-                                            <h5 className="box-title">Customer Centricity</h5>
-                                            <p className="box-text">
-                                                Our clients’ success is our top priority.
-                                            </p>
-                                        </div>
-                                        <div className="checklist">
-                                            {/* <ul>
-                                                <li>
-                                                    <i className="far fa-check-circle text-body"></i>Best
-                                                    Service for You
-                                                </li>
-                                                <li>
-                                                    <i className="far fa-check-circle text-body"></i>Keeping
-                                                    Your Team Productive
-                                                </li>
-                                                <li>
-                                                    <i className="far fa-check-circle text-body"></i>Predictable
-                                                    Costs 24/
-                                                </li>
-                                            </ul> */}
-                                        </div>
-                                        {/* <a href="contact.html" className="th-btn style-radius"
-                                        >Get Started</a> */}
-                                    </div>
-                                    <div className="process-image th-anim">
-                                        <Image src="/assets/img/normal/customer_centricity.jpg" alt="" width={344} height={300} />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="tab-pane fade" id="nav-step3" role="tabpanel">
-                                <div className="process-wrapper">
-                                    <div className="process-content">
-                                        <div className="title-area mb-15">
-                                            <h5 className="box-title">Integrity</h5>
-                                            <p className="box-text">
-                                                We operate with transparency, accountability, and trust.
-                                            </p>
-                                        </div>
-                                        <div className="checklist">
-                                            {/* <ul>
-                                                <li>
-                                                    <i className="far fa-check-circle text-body"></i>Best
-                                                    Service for You
-                                                </li>
-                                                <li>
-                                                    <i className="far fa-check-circle text-body"></i>Keeping
-                                                    Your Team Productive
-                                                </li>
-                                                <li>
-                                                    <i className="far fa-check-circle text-body"></i>Predictable
-                                                    Costs 24/
-                                                </li>
-                                            </ul> */}
-                                        </div>
-                                        {/* <a href="contact.html" className="th-btn style-radius"
-                                        >Get Started</a> */}
-                                    </div>
-                                    <div className="process-image th-anim">
-                                        <Image src="/assets/img/normal/Integrity.jpg" alt="" width={344} height={300} />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="tab-pane fade" id="nav-step4" role="tabpanel">
-                                <div className="process-wrapper">
-                                    <div className="process-content">
-                                        <div className="title-area mb-15">
-                                            <h5 className="box-title">Excellence</h5>
-                                            <p className="box-text">
-                                                We are committed to delivering world-class quality in every project.
-                                            </p>
-                                        </div>
-                                        <div className="checklist">
-                                            {/* <ul>
-                                                <li>
-                                                    <i className="far fa-check-circle text-body"></i>Best
-                                                    Service for You
-                                                </li>
-                                                <li>
-                                                    <i className="far fa-check-circle text-body"></i>Keeping
-                                                    Your Team Productive
-                                                </li>
-                                                <li>
-                                                    <i className="far fa-check-circle text-body"></i>Predictable
-                                                    Costs 24/
-                                                </li>
-                                            </ul> */}
-                                        </div>
-                                        {/* <a href="contact.html" className="th-btn style-radius"
-                                        >Get Started</a> */}
-                                    </div>
-                                    <div className="process-image th-anim">
-                                        <Image src="/assets/img/normal/excellence.jpeg" alt="" width={344} height={300} />
+                                <div className="price-card_content">
+                                    <div className="checklist">
+                                        <p className="">
+                                            To empower businesses with intelligent, data-driven solutions that accelerate growth, optimize operations, and create a sustainable competitive edge.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div
-                            className="shape-mockup d-none d-xxl-block"
-                            data-top="-8%"
-                            data-right="29.5%"
-                        >
-                            <Image src="/assets/img/shape/star-1.png" alt="shape" width={100} height={82} />
-                        </div>
-                        <div
-                            className="shape-mockup d-none d-xxl-block"
-                            data-bottom="-12%"
-                            data-right="29.5%"
-                        >
-                            <Image src="/assets/img/shape/star-2.png" alt="shape" width={100} height={100} />
-                        </div>
-                        <div
-                            className="shape-mockup z-index-3 d-none d-xl-block"
-                            data-top="13%"
-                            data-left="35.5%"
-                        >
-                            <Image src="/assets/img/shape/line-3.png" alt="shape" width={80} height={58} />
+                        <div className="col-xl-4 col-md-6">
+                            <div className="price-card">
+                                <div className="price-card_top">
+                                    <h3 className="price-card_title">Vision</h3>
+                                    <div className="particle">
+                                        <div className="price-particle" id="price-p2"></div>
+                                    </div>
+                                </div>
+                                <div className="price-card_content">
+                                    <div className="checklist">
+                                        <p className="">
+                                            To empower businesses with intelligent, data-driven solutions that accelerate growth, optimize operations, and create a sustainable competitive edge.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </section>
 
-            <div className="overflow-hidden space">
+            {/* <section className="" id="service-sec">
+                <div className="round-container gr-bg3 space">
+                    <div className="container">
+
+                        <div className="title-area text-center">
+                            <span className="sub-title">CORE VALUES</span>
+                            <h2 className="sec-title">Our Core Values</h2>
+                        </div>
+
+                    </div>
+
+                    <div className="row">
+                            <div className="col">
+                                <div className="counter-card">
+                                    <div className="icon">
+                                        <Image src="/assets/img/icon/counter_2_1.png" alt="Icon" width={86} height={80} />
+                                    </div>
+                                    <div className="media-body">
+                                        <h2 className="counter-card_number text-title">
+                                            <span className="counter-number" style={{  fontSize: '28px' }}>Innovation</span>
+                                        </h2>
+                                        <p className="counter-card_text text-body">We constantly push boundaries to deliver cutting-edge solutions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col">
+                                <div className="counter-card">
+                                    <div className="icon">
+                                        <Image src="/assets/img/icon/counter_2_2.png" alt="Icon" width={86} height={80} />
+                                    </div>
+                                    <div className="media-body">
+                                        <h2 className="counter-card_number text-title">
+                                            <span className="counter-number" style={{  fontSize: '28px' }}>Centricity</span>
+                                        </h2>
+                                        <p className="counter-card_text text-body">Our clients’ success is our top priority.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col">
+                                <div className="counter-card">
+                                    <div className="icon">
+                                        <Image src="/assets/img/icon/counter_2_3.png" alt="Icon" width={86} height={80} />
+                                    </div>
+                                    <div className="media-body">
+                                        <h2 className="counter-card_number text-title">
+                                            <span className="counter-number" style={{  fontSize: '28px' }}>Integrity</span>
+                                        </h2>
+                                        <p className="counter-card_text text-body">We operate with transparency, accountability, and trust.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col">
+                                <div className="counter-card">
+                                    <div className="icon">
+                                        <Image src="/assets/img/icon/counter_2_4.png" alt="Icon" width={86} height={80} />
+                                    </div>
+                                    <div className="media-body">
+                                        <h2 className="counter-card_number text-title">
+                                            <span className="counter-number" style={{  fontSize: '28px' }}>Excellence</span>
+                                        </h2>
+                                        <p className="counter-card_text text-body">We deliver world-class quality in every project.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </section> */}
+
+            
+
+            <div className="overflow-hidden" style={{ marginTop: '50px' }}>
                 <div className="container th-container4">
                     <div
                         className="row justify-content-center justify-content-lg-between align-items-center"
@@ -507,13 +355,92 @@ export default function About() {
                                     <Image src="/assets/img/normal/our_journeyy.jpg" alt="img" width={561} height={432} />
                                 </div>
                                 <div className="feature-thumb14-2 jump">
-                                    <Image src="/assets/img/normal/feature-img-12-2.jpg" alt="img" width={209} height={173} />
+                                    <Image src="/assets/img/normal/our_journey.jpeg" alt="img" width={209} height={173} />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <section className="service-area12" id="service-sec" style={{ marginTop: '50px' }}>
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-xl-6">
+                            <div className="title-area text-center me-xl-5 ms-xl-5">
+                                <span className="sub-title sub-title3">CORE VALUES</span>
+                                <h2 className="sec-title">
+                                    Our Core Values
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="slider-area">
+                        <div
+                            className="has-shadow"
+                            id="serviceSlider12">
+                            <div className="row">
+                                <div className="col">
+                                    <div className="swiper-slide">
+                                        <div className="service-item2 th-ani">
+                                            <div className="service-item2_content service-item2_content-sub">
+                                                <h3 className="box-title">
+                                                    <a href="service-details.html" style={{ fontSize: '20px' }}>Innovation</a>
+                                                </h3>
+                                                <p className="service-item2_text">
+                                                    We constantly push boundaries to deliver cutting-edge solutions.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col">
+                                    <div className="swiper-slide">
+                                        <div className="service-item2 th-ani">
+                                            <div className="service-item2_content service-item2_content-sub">
+                                                <h3 className="box-title">
+                                                    <a href="service-details.html" style={{ fontSize: '20px' }}>Customer Centricity</a>
+                                                </h3>
+                                                <p className="service-item2_text">
+                                                    Our clients’ success is our top priority.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col">
+                                    <div className="swiper-slide">
+                                        <div className="service-item2 th-ani">
+                                            <div className="service-item2_content service-item2_content-sub">
+                                                <h3 className="box-title">
+                                                    <a href="service-details.html" style={{ fontSize: '20px' }}>Integrity</a>
+                                                </h3>
+                                                <p className="service-item2_text">
+                                                    We operate with transparency, accountability, and trust.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col">
+                                    <div className="swiper-slide">
+                                        <div className="service-item2 th-ani">
+                                            <div className="service-item2_content service-item2_content-sub">
+                                                <h3 className="box-title">
+                                                    <a href="service-details.html" style={{ fontSize: '20px' }}>Excellence</a>
+                                                </h3>
+                                                <p className="service-item2_text">
+                                                    We deliver world-class quality in every project.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section className="space-top space-top-sub-team">
                 <div className="container">

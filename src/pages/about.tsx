@@ -5,12 +5,18 @@ import Link from 'next/link';
 
 export default function About() {
 
-    const router = useRouter()
+    const router = useRouter();
 
     useEffect(() => {
-        // Always do navigations after the first render
-        router.push('/about', undefined, { shallow: true })
-    }, [router, router.query.counter]);
+        if (router.isReady && router.pathname !== "/about") {
+          router.replace("/about");
+        }
+      }, [router.isReady, router.pathname]);
+
+    // useEffect(() => {
+    //     // Always do navigations after the first render
+    //     router.push('/about', undefined, { shallow: true })
+    // }, [router, router.query.counter]);
 
     // useEffect(() => {
 

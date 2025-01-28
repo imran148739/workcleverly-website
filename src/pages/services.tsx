@@ -9,7 +9,7 @@ export default function Services() {
 
     useEffect(() => {
         router.push('/services', undefined, { shallow: true })
-    }, [router.query.counter]);
+    }, [router, router.query.counter]);
 
     return (
         <div>
@@ -287,7 +287,8 @@ export default function Services() {
             </section>
 
             <section className="position-relative space">
-                <div className="th-bg-img" data-bg-src="assets/img/bg/cta_bg_2.jpg">
+                <div className="th-bg-img" style={{
+                backgroundImage: 'url("/assets/img/bg/cta_bg_2.jpg")'}}>
                     <Image src="/assets/img/bg/bg_overlay_1.png" alt="overlay" width={40} height={36} />
                 </div>
                 <div className="container z-index-common">
@@ -319,9 +320,9 @@ export default function Services() {
 
             <section
                 className="bg-smoke"
-                id="process-sec"
-                data-bg-src="assets/img/bg/process_bg_1.png"
-            >
+                id="process-sec" style={{
+                    backgroundImage: 'url("/assets/img/bg/process_bg_1.png")'}}
+                    >
                 <div className="container space">
                     <div className="title-area text-center">
                         <span className="sub-title"

@@ -11,7 +11,7 @@ export default function Home() {
   useEffect(() => {
     // Always do navigations after the first render
     router.push('/home', undefined, { shallow: true })
-  }, [router.query.counter]);
+  }, [router, router.query.counter]);
 
   return (
     <div>
@@ -40,7 +40,7 @@ export default function Home() {
             <p className="hero-text">
               At WorkCleverly Tech Limited, we empower businesses to unlock their true potential through cutting-edge solutions
               in Data Analytics, Artificial Intelligence, Cloud Infrastructure, ERP Modernization, and more. With a global presence
-              in Hong Kongand Chennai, we deliver tailored solutions that drive success, efficiency, and growth.
+              in Hong Kong and Chennai, we deliver tailored solutions that drive success, efficiency, and growth.
             </p>
             <div className="btn-group">
               <Link href="/services" className="th-btn">
@@ -144,7 +144,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="process-card-area">
+          <div className="process-card-area" style={{ marginTop: '40px' }}>
             <div className="process-line position-top">
               <Image src="/assets/img/bg/process_line_2.svg" alt="line" width={985} height={72} />
             </div>
@@ -237,11 +237,11 @@ export default function Home() {
               </p> */}
               <div className="feature-circle-wrap">
                 <div className="feature-circle">
-                  <div className="progressbar" data-path-color="#684DF4">
+                  {/* <div className="progressbar" data-path-color="#684DF4">
                     <div className="circle" data-percent="100">
                       <div className="circle-num"></div>
                     </div>
-                  </div>
+                  </div> */}  
                   <div className="media-body">
                     <h3 className="feature-circle_title">Global Reach</h3>
                     <p className="feature-circle_text">
@@ -250,11 +250,11 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="feature-circle">
-                  <div className="progressbar" data-path-color="#684DF4">
+                  {/* <div className="progressbar" data-path-color="#684DF4">
                     <div className="circle" data-percent="100">
                       <div className="circle-num"></div>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="media-body">
                     <h3 className="feature-circle_title">Innovative Expertise</h3>
                     <p className="feature-circle_text">
@@ -265,11 +265,11 @@ export default function Home() {
               </div>
               <div className="feature-circle-wrap">
                 <div className="feature-circle">
-                  <div className="progressbar" data-path-color="#684DF4">
+                  {/* <div className="progressbar" data-path-color="#684DF4">
                     <div className="circle" data-percent="100">
                       <div className="circle-num"></div>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="media-body">
                     <h3 className="feature-circle_title">Tailored Solutions</h3>
                     <p className="feature-circle_text">
@@ -278,11 +278,11 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="feature-circle">
-                  <div className="progressbar" data-path-color="#684DF4">
+                  {/* <div className="progressbar" data-path-color="#684DF4">
                     <div className="circle" data-percent="100">
                       <div className="circle-num"></div>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="media-body">
                     <h3 className="feature-circle_title">Proven Track Record</h3>
                     <p className="feature-circle_text">

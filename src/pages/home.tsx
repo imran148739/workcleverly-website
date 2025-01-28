@@ -6,12 +6,13 @@ import Image from 'next/image';
 
 export default function Home() {
 
-  const router = useRouter()
+  const router = useRouter();
 
   useEffect(() => {
-    // Always do navigations after the first render
-    router.push('/home', undefined, { shallow: true })
-  }, [router, router.query.counter]);
+    if (router.isReady && router.pathname !== "/home") {
+      router.replace("/home");
+    }
+  }, [router.isReady, router.pathname]);
 
   return (
     <div>

@@ -5,11 +5,17 @@ import Link from 'next/link';
 
 export default function Services() {
 
-    const router = useRouter()
+    const router = useRouter();
 
     useEffect(() => {
-        router.push('/services', undefined, { shallow: true })
-    }, [router, router.query.counter]);
+        if (router.isReady && router.pathname !== "/services") {
+          router.replace("/services");
+        }
+      }, [router.isReady, router.pathname]);
+
+    // useEffect(() => {
+    //     router.push('/services', undefined, { shallow: true })
+    // }, [router, router.query.counter]);
 
     return (
         <div>

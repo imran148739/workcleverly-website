@@ -42,11 +42,16 @@ export default function Contact() {
         }
     };
 
-    const router = useRouter()
+    const router = useRouter();
 
     useEffect(() => {
-        router.push('/contact', undefined, { shallow: true })
-    }, [router, router.query.counter]);
+        if (router.isReady && router.pathname !== "/contact") {
+          router.replace("/contact");
+        }
+      }, [router.isReady, router.pathname]);
+    // useEffect(() => {
+    //     router.push('/contact', undefined, { shallow: true })
+    // }, [router, router.query.counter]);
 
     return (
         <div>
